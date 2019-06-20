@@ -11,12 +11,24 @@ let mix = require('laravel-mix');
  |
  */
 
-// mix.js('resources/assets/js/app.js', 'public/js')
+mix.js('resources/assets/js/app.js', 'public/js')
+   // .sass('resources/assets/sass/app.scss', 'public/css');
 
-mix.webpackConfig({    
-   resolve: {      
-     alias: {
-         @’: __dirname + '/resources/assets/js'      
-     },    
-   },  
- })
+   mix.webpackConfig({    
+      resolve: {      
+        alias: {
+         '@': __dirname + '/resources/assets/js'      
+        },    
+      },  
+    })
+
+
+   // mix.webpackConfig({
+   //    resolve: {
+   //      extensions: ['.js', '.vue', '.json'],
+   //      alias: {
+   //        'vue$': 'vue/dist/vue.esm.js',
+   //        '@': __dirname + '/resources/assets/js'
+   //      },
+   //    },
+   //  })
